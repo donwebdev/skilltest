@@ -2,7 +2,7 @@
 
 body {
     background: white;
-    font: "freight-sans-pro", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+    font-family: "freight-sans-pro", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
     color: #383838;
 }
 
@@ -14,7 +14,7 @@ for showing 2 links at the top instead of a full nav tree
 */
 
 header {
-	height: 55px;	
+	height: 56px;	
 }
 
 .login-header {
@@ -25,8 +25,9 @@ header {
 	font-weight: 		700;
 	margin: 			0;
 	padding: 			15px 50px 15px 0;
-	font-size: 			1.8rem;	
+	font-size: 			1.35em;	
 	text-align: 		right;
+    text-transform: 	uppercase;
 }
 
 .login-header div {	
@@ -57,11 +58,22 @@ Hero Styling
 }
 
 .member-co-title {
-	
+	margin: 			30px 0 80px 15%;	
+}
+
+.member-title {
+    text-transform: 	uppercase;
+	font-size: 			3.4em;
+	font-weight: 		600;
 }
 
 .co-title {
+    text-transform: 	uppercase;
 	text-decoration: 	underline;
+	font-size: 			2.2em;
+	font-weight: 		100;
+	margin: 			10px 7px;
+	vertical-align: 	top;
 }
 
 .member-co-title div{
@@ -69,21 +81,34 @@ Hero Styling
 }
 
 .hero-text {
-	
+	text-align:center;	
 }
 
 .hero-header {
-	
+    text-transform: 	uppercase;
+	font-size: 			5.2em;
+	line-height: 		0.8;
+	font-weight: 		100;
+	width: 				650px;
+	margin: 			0 auto;
 }
 
 .hero-subheader {
-	
+	font-weight: 		bold;
+	font-size: 			1.3em;
+	line-height: 		1.1;
+	width: 				620px;
+	margin: 			20px auto;
 }
 
 .hero-button, .hero-button:link, .hero-button:visited {
+    text-transform: 	uppercase;
+	font-size: 			2em;
+	font-weight: 		600;
 	border-radius: 		0;
 	background-color: 	#ff6352;
 	border:				1px solid #ff4e3b;
+	margin: 			0 auto;
 }
 
 .hero-button:hover {
@@ -91,7 +116,7 @@ Hero Styling
 	border: 			1px solid #ff4e3b;
 }
 
-.hero-button:active {
+.hero-button:active, .hero-button:active:focus {
 	background-color: 	#ff4e3b;
 	border: 			1px solid #ff4e3b;
 }
@@ -106,18 +131,33 @@ Parallax Headers
 	width: 				100%;	
 	height: 			295px;	
 	color: 				#000;
+	font-family: "jaf-bernino-sans-condensed", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
 }
 
-.experience-discounts {
-	background: 		#41b89f;
+.experience div {
+	font-weight: 		bold;
+    text-transform: 	uppercase;
+    font-size: 			3em;
+    line-height: 		1.5;
+    background: 		rgba(255, 255, 255, 0.85);
+    display: 			inline-block;
+    box-shadow: 		0.2em 0 0 rgba(255, 255, 255, 0.85), -0.2em 0 0 rgba(255, 255, 255, 0.85);
+    left: 				0.2em;
 }
 
-.experience-cash-back {
-	background: 		#ff6f60;
+.experience-discounts {   
+	background: 		url(../images/bg_pattern_chevron_green.png) #26c9a6;
+    background-attachment: fixed;
+}
+
+.experience-cash-back {    
+	background: 		url(../images/bg_pattern_ignite_orange.png) #f36c4f;
+    background-attachment: fixed;
 }
 
 .experience-prizes {
-	background: 		#2b2b2b;	
+	background: 		url(../images/bg_gray_pattern.png) #383838;
+    background-attachment: fixed;
 }
 
 /*
@@ -145,6 +185,7 @@ Footer
 
 footer {
 	width: 				100%;
+	height: 			320px;
 	background-color: 	#000;
 	color: 				#eee;
 }
