@@ -27,10 +27,10 @@
 	</script>
     
     <!-- Site javascript library -->
-    <script src="/js/functions.js"></script>
+    <script src="js/functions.js"></script>
     
     <!-- Site styling -->
-    <script src="/style/main.css"></script>    
+    <link rel="stylesheet" href="style/main.css">    
     
     <title>Member Co - Discounts. Experiences. Prizes.</title>
     
@@ -39,22 +39,25 @@
 <body>
 	<header>
         <div class="container-fluid login-header">
-            <div>LOG IN</div>
-            <div>|</div>
-            <div>SIGN UP</div>        
+            <div id="login-link">LOG IN</div>
+            <span>|</span>
+            <div>
+            	<a href="signup.html">SIGN UP</a>
+            </div>        
         </div>
     </header>
-	<div class="container-fluid member-co-title">
-    	<div>MEMBER</div>
-        <div>CO</div>       
+    <div class="container-fluid hero">
+        <div class="container-fluid member-co-title">
+            <div>MEMBER</div>
+            <div class="co-title">CO</div>       
+        </div>
+        <div class="container-fluid hero-text">
+            <div class="hero-header">DISCOUNTS EXPERIENCES. PRIZES.</div>
+            <div class="hero-subheader">Craving extraordinary new savings opportunities and unique experiences? It's time to shake up your day</div>     
+            <a href="#signup" class="btn btn-lg btn-success hero-button">JOIN NOW! &raquo;</a>       
+        </div>
     </div>
-	<div class="container-fluid hero-text">
-    	<div>DISCOUNTS EXPERIENCES. PRIZES.</div>
-        <div>Craving extraordinary new savings opportunities and unique experiences?</div>      
-        <div>It's time to shake up your day</div>     
-        <div>Join Now! &raquo;</div>       
-    </div>
-	<div class="container-fluid">
+	<div class="container-fluid experience experience-discounts">
     	<div>AMPLIFY YOUR EXPERIENCE WITH DISCOUNTS.</div>      
     </div>
 	<div class="container-fluid">
@@ -80,10 +83,10 @@
             </div>
         </div>      
     </div>
-	<div class="container-fluid">
+	<div class="container-fluid experience experience-cash-back">
     	<div>AMPLIFY YOUR EXPERIENCE WITH CASH BACK.</div>      
     </div>
-	<div class="container-fluid">
+	<div class="container-fluid experience">
     	<div>Featured Discounts</div>
         <div class="slidein">
         <!-- This is populated html that jquery turns into a slider -->
@@ -106,7 +109,7 @@
             </div>
         </div>      
     </div>
-	<div class="container-fluid">
+	<div class="container-fluid experience experience-prizes">
     	<div>AMPLIFY YOUR EXPERIENCE WITH PRIZES.</div>      
     </div>
 	<div class="container-fluid">
@@ -143,7 +146,7 @@
         </div>
     </div>
     <footer>
-    	<div>
+    	<div class="container-fluid">
         	<a href="">
             	<img src="" alt="Follow us on Facebook">
             </a>

@@ -2,7 +2,149 @@
 
 body {
     background: white;
-    font: 100%/1.3 "freight-sans-pro", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-    -webkit-text-size-adjust: 100%;
-    color: #383838;	
+    font: "freight-sans-pro", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+    color: #383838;
+}
+
+
+/*
+Login Header Styling
+Custom styling as bootstraps nav system is a little complicated
+for showing 2 links at the top instead of a full nav tree
+*/
+
+header {
+	height: 55px;	
+}
+
+.login-header {
+	position: 			fixed;
+	width: 				100%;
+	background: 		black;
+	color: 				#fff;
+	font-weight: 		700;
+	margin: 			0;
+	padding: 			15px 50px 15px 0;
+	font-size: 			1.8rem;	
+	text-align: 		right;
+}
+
+.login-header div {	
+	display: 			inline-block;
+	margin:  			0 10px;
+	cursor: 			pointer;
+}
+
+.login-header span {
+	font-weight: 		300;
+}
+
+.login-header a, .login-header a:hover {
+	color: 				#fff;
+	text-decoration: 	none;
+}
+
+/*
+Hero Styling
+*/
+
+.hero {
+	display: 			block;
+	width: 				100%;
+	background: 		#666;
+	color: 				#fff;
+	height: 			550px;
+}
+
+.member-co-title {
+	
+}
+
+.co-title {
+	text-decoration: 	underline;
+}
+
+.member-co-title div{
+	display: 			inline-block;	
+}
+
+.hero-text {
+	
+}
+
+.hero-header {
+	
+}
+
+.hero-subheader {
+	
+}
+
+.hero-button, .hero-button:link, .hero-button:visited {
+	border-radius: 		0;
+	background-color: 	#ff6352;
+	border:				1px solid #ff4e3b;
+}
+
+.hero-button:hover {
+	background-color: 	#ff4e3b;
+	border: 			1px solid #ff4e3b;
+}
+
+.hero-button:active {
+	background-color: 	#ff4e3b;
+	border: 			1px solid #ff4e3b;
+}
+
+
+/*
+Parallax Headers
+*/
+
+.experience {
+	display: 			block;
+	width: 				100%;	
+	height: 			295px;	
+	color: 				#000;
+}
+
+.experience-discounts {
+	background: 		#41b89f;
+}
+
+.experience-cash-back {
+	background: 		#ff6f60;
+}
+
+.experience-prizes {
+	background: 		#2b2b2b;	
+}
+
+/*
+JS Boxes
+*/
+
+
+/*
+Sliders
+*/
+
+
+/*
+Auctions
+*/
+
+
+/*
+Sweepstakes
+*/
+
+/* 
+Footer 
+*/
+
+footer {
+	width: 				100%;
+	background-color: 	#000;
+	color: 				#eee;
 }
