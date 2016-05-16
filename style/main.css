@@ -28,6 +28,7 @@ header {
 	font-size: 			1.35em;	
 	text-align: 		right;
     text-transform: 	uppercase;
+	z-index: 1000;
 }
 
 .login-header div {	
@@ -81,7 +82,7 @@ Hero Styling
 }
 
 .hero-text {
-	text-align:center;	
+	text-align: 		center;	
 }
 
 .hero-header {
@@ -89,7 +90,8 @@ Hero Styling
 	font-size: 			5.2em;
 	line-height: 		0.8;
 	font-weight: 		100;
-	width: 				650px;
+	width: 				100%;
+	max-width:			650px;
 	margin: 			0 auto;
 }
 
@@ -97,7 +99,8 @@ Hero Styling
 	font-weight: 		bold;
 	font-size: 			1.3em;
 	line-height: 		1.1;
-	width: 				620px;
+	width: 				100%;
+	max-width: 			620px;
 	margin: 			20px auto;
 }
 
@@ -127,21 +130,22 @@ Parallax Headers
 */
 
 .experience {
-	display: 			block;
+	position: 			relative;
 	width: 				100%;	
-	height: 			295px;	
+	height: 			315px;	
 	color: 				#000;
 	font-family: "jaf-bernino-sans-condensed", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
 }
 
-.experience div {
+.experience p {
 	font-weight: 		bold;
     text-transform: 	uppercase;
     font-size: 			3em;
     line-height: 		1.5;
     background: 		rgba(255, 255, 255, 0.85);
-    display: 			inline-block;
+    display: 			inline;
     box-shadow: 		0.2em 0 0 rgba(255, 255, 255, 0.85), -0.2em 0 0 rgba(255, 255, 255, 0.85);
+    position: 			relative;
     left: 				0.2em;
 }
 
@@ -150,9 +154,30 @@ Parallax Headers
     background-attachment: fixed;
 }
 
+.experience-discounts div, .experience-prizes div {
+    position: 			absolute;
+    top: 				50%;
+    -webkit-transform: 	translate(-50%,-50%);
+    -ms-transform: 		translate(-50%,-50%);
+    transform: 			translate(-50%,-50%);
+    left: 				35%;
+    max-width: 			40em;
+}
+
 .experience-cash-back {    
 	background: 		url(../images/bg_pattern_ignite_orange.png) #f36c4f;
     background-attachment: fixed;
+}
+
+.experience-cash-back div{
+	text-align: right;
+    position: 			absolute;
+    top: 				50%;
+	right: 				36%;
+    -webkit-transform: 	translate(50%,-50%);
+    -ms-transform: 		translate(50%,-50%);
+    transform: 			translate(50%,-50%);
+    max-width: 			40em;
 }
 
 .experience-prizes {
@@ -169,15 +194,84 @@ JS Boxes
 Sliders
 */
 
+.slidein-container {
+	margin: 			0 auto 75px auto;
+	display: 			table;
+	text-align: 		center;
+	width: 				100%;
+	max-width: 			970px;
+}
+
+.slidein, .slidein-wrapper {
+	display: 			inline-block;
+}
+
+.slidein-title {
+	text-align: 		left;
+	font-size: 			1.5em;
+	font-weight: 		bold;
+	margin: 			40px 0 16px 4px;
+}
+
+.slidein-box {
+	display: 			inline-block;
+	width: 				230px;
+	max-width: 			230px;
+	height: 			275px;
+	max-height: 		275px;
+	border: 			2px solid #ddd;
+	cursor: 			pointer;
+	margin: 			0 5px 10px 5px;
+	position: 			relative;
+}
+
+.slidein-box div {
+	position: 			absolute;
+	bottom: 			0;
+	width: 				100%;
+	font-size: 			1.1em;
+	padding: 			10px 0;
+	background-color: 	#333;
+	color: 				#fff;
+	vertical-align: 	baseline;
+}
 
 /*
-Auctions
+Auctions and Sweepstakes
 */
 
+.auctions-container, .sweepstakes-container {
+	vertical-align: 	top;
+	display: 			inline-block;
+	width: 				472px;
+	max-width: 			472px;
+	height: 			300px;
+	margin: 			0 5px 0 5px;
+	border: 			2px solid #ddd;
+}
 
-/*
-Sweepstakes
-*/
+.auctions-header, .sweepstakes-header, .auction-item div, .sweepstakes-item div {
+	width: 				100%;
+	font-size: 			1.1em;
+	padding: 			10px 0;
+	background-color: 	#333;
+	color: 				#fff;	
+}
+
+.auctions-header, .sweepstakes-header {
+	text-transform: 	uppercase;
+	font-weight: 		bold;	
+	font-size: 			1.3em;
+}
+
+.sweepstakes-item div {
+	vertical-align: baseline; 
+ }
+
+.auction-time-left, .sweepstakes-time-left {
+	background-color: #41b89f !important;
+	margin: 			1px 0 0 0;
+}
 
 /* 
 Footer 
@@ -188,4 +282,21 @@ footer {
 	height: 			320px;
 	background-color: 	#000;
 	color: 				#eee;
+	padding: 			40px 100px !important;
+}
+
+.footer-social {
+	text-align: 		right;
+}
+
+.footer-copyright {
+	float: 				left;	
+}
+
+.footer-links {
+	float: 				right;	
+}
+
+.footer-links a {
+	color: 				#fff;	
 }
