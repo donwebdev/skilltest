@@ -148,6 +148,7 @@ Parallax Headers
 	height: 			315px;	
 	color: 				#000;
 	font-family: "jaf-bernino-sans-condensed", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+	overflow: hidden;
 }
 
 .experience p {
@@ -196,6 +197,60 @@ Parallax Headers
 .experience-prizes {
 	background: 		url(../images/bg_gray_pattern.png) #383838;
     background-attachment: fixed;
+}
+
+/*
+Parallax Icons 
+*/
+
+.parallax-diamond {
+	background: 		url(../images/icon_diamond.png);
+	background-repeat: 	no-repeat;
+	display: 			block;
+	position: 			absolute !important;
+	top: 				314px !important;
+	width: 				423px;
+	height: 			632px;
+	text-align: center;
+}
+
+.parallax-discounts-icon {
+	background: 		url(../images/icon_tag.png);
+	background-repeat: 	no-repeat;
+	display: 			inline-block;
+	top: 				200px !important;
+	left:  				220px !important;
+	width: 				124px;
+	height: 			113px;
+}
+
+.parallax-cash-back-icon {
+	background: 		url(../images/icon_card.png);
+	background-repeat: 	no-repeat;
+	display: 			inline-block;
+	top: 				220px !important;
+	left:  				100px !important;
+	width: 				124px;
+	height: 			113px;
+}
+
+.parallax-prizes-icon {
+	background: 		url(../images/icon_trophy.png);
+	background-repeat: 	no-repeat;
+	display: 			inline-block;
+	top: 				220px !important;
+	left:  				220px !important;
+	width: 				124px;
+	height: 			113px;
+}
+
+.parallax-diamond.left {
+	left: 				-10% !important;
+	margin-left: 		30px !important;
+		
+}
+.parallax-diamond.right {
+	left: 				75% !important;		
 }
 
 /*
