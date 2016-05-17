@@ -47,6 +47,22 @@ header {
 	text-decoration: 	none;
 }
 
+.container-fluid {
+	overflow: 			hidden;	
+}
+
+@media (max-width: 425px) {
+	.login-header {
+		text-align: 	center;
+		font-size: 		1.2em;
+		padding: 		10px;	
+	}
+	
+	header {
+		height: 		43px;		
+	}
+}
+
 /*
 Hero Styling
 */
@@ -134,7 +150,78 @@ Hero Styling
 }
 
 .hero-button .glyphicon {
-	font-size: .8em;
+	font-size: 			.8em;
+}
+
+
+@media (max-width: 1000px) {
+	.hero {
+		background-position: 62% 60%;
+	}	
+}
+
+@media (max-width: 780px) {
+	.hero {
+		background-position: 66% 70%;
+	}	
+}
+
+@media (max-width: 680px) {
+	.member-co-title {
+		margin: 		40px 0 50px 0;
+		text-align: 	center;
+	}
+}
+
+@media (max-width: 425px) {
+	.hero {
+		background-position: 68% 90%;
+	}
+	.hero-header {
+		font-size: 		4em;
+	}
+	.hero-button {
+		padding: 		30px !important;	
+		margin-top: 	20px !important;
+	}
+}
+
+@media (max-width: 370px) {
+	.hero {
+		background-position: 50% 90%;
+	}
+	.member-title {
+		padding-top: 		20px;
+		padding-bottom: 	20px;	
+	}
+	.hero-header {
+		font-size: 		3.5em;
+	}
+	.member-co-title {
+		margin: 		20px 0 30px 0;
+		text-align: 	center;
+		font-size: 		.6em;
+	}
+	.hero-button {
+		padding: 		30px !important;	
+		margin-top: 	20px !important;
+	}
+	.hero-subheader {
+		font-weight: 		normal;
+		font-size: 			1.4em;
+		line-height: 		1.1;
+		width: 				100%;
+		max-width: 			620px;
+		margin: 			20px auto;
+	}
+	.co-title {
+		text-transform: 	uppercase;
+		text-decoration: 	underline;
+		font-size: 			2.2em;
+		font-weight: 		100;
+		margin: 			26px 7px;
+		vertical-align: 	top;
+	}
 }
 
 
@@ -147,8 +234,12 @@ Parallax Headers
 	width: 				100%;	
 	height: 			315px;	
 	color: 				#000;
-	font-family: "jaf-bernino-sans-condensed", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-	overflow: hidden;
+	font-family: 		"jaf-bernino-sans-condensed", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+	overflow: 			hidden;
+}
+
+.experience div {
+	z-index: 			500;
 }
 
 .experience p {
@@ -184,7 +275,7 @@ Parallax Headers
 }
 
 .experience-cash-back div{
-	text-align: right;
+	text-align: 		right;
     position: 			absolute;
     top: 				50%;
 	right: 				36%;
@@ -199,6 +290,12 @@ Parallax Headers
     background-attachment: fixed;
 }
 
+@media (max-width: 320px) {	
+	.experience p {
+		font-size: 			2.5em;
+	}
+}
+
 /*
 Parallax Icons 
 */
@@ -207,12 +304,13 @@ Parallax Icons
 	background: 		url(../images/icon_diamond.png);
 	background-repeat: 	no-repeat;
 	display: 			block;
-	position: 			absolute !important;
+	position: 			relative !important;
 	top: 				314px !important;
 	width: 				423px;
 	height: 			632px;
-	text-align: center;
-}
+	text-align: 		center;
+	z-index: 			5 !important;
+} 
 
 .parallax-discounts-icon {
 	background: 		url(../images/icon_tag.png);
@@ -222,6 +320,7 @@ Parallax Icons
 	left:  				220px !important;
 	width: 				124px;
 	height: 			113px;
+	z-index: 			5 !important;
 }
 
 .parallax-cash-back-icon {
@@ -232,6 +331,7 @@ Parallax Icons
 	left:  				100px !important;
 	width: 				124px;
 	height: 			113px;
+	z-index: 			5 !important;
 }
 
 .parallax-prizes-icon {
@@ -242,21 +342,52 @@ Parallax Icons
 	left:  				220px !important;
 	width: 				124px;
 	height: 			113px;
+	z-index: 			5 !important;
 }
 
 .parallax-diamond.left {
-	left: 				-10% !important;
-	margin-left: 		30px !important;
-		
+	right: 				8%;
 }
 .parallax-diamond.right {
 	left: 				75% !important;		
 }
 
-/*
-JS Boxes
-*/
+@media (max-width: 1100px) {	
+	.parallax-diamond.left {
+		right: 15% !important;
+	}
+}
 
+@media (max-width: 850px) {	
+	.parallax-diamond.left {
+		right: 20% !important;
+	}
+
+}
+
+@media (max-width: 670px) {	
+	.parallax-diamond.left {
+		right: 35% !important;
+	}
+}
+
+@media (max-width: 610px) {	
+	.parallax-diamond.left {
+		right: 58% !important;
+	}
+}
+
+
+@media (max-width: 500px) {	
+	.parallax-diamond.left {
+		right: 90% !important;
+	}
+}
+@media (max-width: 375px) {	
+	.parallax-diamond.left {
+		right: 140% !important;
+	}
+}
 
 /*
 Sliders
@@ -287,7 +418,6 @@ Sliders
 	max-width: 			230px;
 	height: 			275px;
 	max-height: 		275px;
-	border: 			2px solid #ddd;
 	cursor: 			pointer;
 	margin: 			0 5px 10px 5px;
 	position: 			relative;
@@ -317,6 +447,104 @@ Sliders
 	vertical-align: 	baseline;
 }
 
+.slidein-box-normal {
+	border: 			2px solid #ddd;
+	background-color: 	#fff;	
+}
+
+.slidein-box-hover {
+	background-color: 	#ffc;	
+	border: 			2px solid #fd3;
+}
+
+@media (max-width: 1000px) {
+	
+	.slidein-container {
+		margin: 			0 auto 25px auto;
+	}
+	
+	.slidein-title {
+		text-align: 		center;
+		font-size: 			2.2em;
+		margin: 			20px 0 16px 4px;
+	}
+	
+	.slidein-box {
+		display: 			inline-block;
+		width: 				45%;
+		max-width: 			45%;
+		height: 			275px;
+		max-height: 		275px;
+		cursor: 			pointer;
+		margin: 			0 20px 10px 5px;
+	}
+	
+	.slidein-box div {
+		position: 			absolute;
+		bottom: 			0;
+		width: 				100%;
+		font-size: 			1.3em;
+		padding: 			10px 0;
+		background-color: 	#333;
+		color: 				#fff;
+		vertical-align: 	baseline;
+	}
+
+}
+
+@media (max-width: 690px) {
+	
+	.slidein-container {
+		margin: 			0 auto 25px auto;
+	}
+	
+	.slidein-title {
+		text-align: 		center;
+		font-size: 			2.2em;
+		margin: 			20px 0 16px 4px;
+	}
+	
+	.slidein-box {
+		display: 			inline-block;
+		width: 				100%;
+		max-width: 			100%;
+		height: 			275px;
+		max-height: 		275px;
+		cursor: 			pointer;
+		margin: 			0 20px 10px 5px;
+	}
+	
+	.slidein-box div {
+		position: 			absolute;
+		bottom: 			0;
+		width: 				100%;
+		font-size: 			1.5em;
+		padding: 			10px 0;
+	}
+
+}
+
+@media (max-width: 425px) {
+	
+	
+	.slidein-title {
+		text-align: 		center;
+		font-size: 			1.7em;
+		margin: 			20px 0 16px 4px;
+	}
+}
+
+@media (max-width: 320px) {
+	
+	
+	.slidein-title {
+		text-align: 		center;
+		font-size: 			1.4em;
+		margin: 			20px 0 16px 4px;
+	}
+}
+
+
 /*
 Auctions and Sweepstakes
 */
@@ -327,7 +555,7 @@ Auctions and Sweepstakes
 	width: 				472px;
 	max-width: 			472px;
 	height: 			340px;
-	margin: 			0 5px 0 5px;
+	margin: 			0 5px 20px 5px;
 	border: 			2px solid #ddd;
 }
 
@@ -374,6 +602,32 @@ Auctions and Sweepstakes
     -webkit-transform: 	translateX(-50%);
     -ms-transform: 		translateX(-50%);
     transform: 			translateX(-50%);
+}
+
+@media (max-width: 500px) {
+	
+	.auctions-container, .sweepstakes-container {
+		vertical-align: 	top;
+		display: 			inline-block;
+		width: 				100%;
+		max-width: 			390px;
+		height: 			350px;
+		overflow: 			hidden;
+	}
+}
+
+@media (max-width: 420px) {
+	
+	.auctions-container, .sweepstakes-container {
+		max-width: 			320px;
+	}
+}
+
+@media (max-width: 350px) {
+	
+	.auctions-container, .sweepstakes-container {
+		max-width: 			290px;
+	}
 }
 
 /*
@@ -439,6 +693,53 @@ footer {
 	opacity: 			1;
 }
 
+@media (max-width: 700px) {
+	
+	footer {
+		padding: 			40px 20px !important;
+	}
+}
+
+@media (max-width: 540px) {
+		
+	.footer-copyright {
+		float: 				none;
+		text-align: 		center;
+	}
+
+	.footer-links {
+		float: 				none;
+		text-align: 		center;
+	}
+
+}
+
 /*
 Login Form
 */
+
+.modal-body input {
+	margin-bottom: 10px;
+	font-size: 2em;
+	padding: 7px 10px;
+	height: 50px;
+	
+}
+
+.login-button {
+	width: 100%;	
+}
+
+.login-footer {
+	text-align: center;	
+}
+
+.login-footer a {
+	display: inline-block;
+	margin: 15px 5px 4px 5px;
+	line-height: 1.4;
+}
+
+.login-container {
+	max-width: 500px;	
+}
