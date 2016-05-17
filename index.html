@@ -15,16 +15,8 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     
     <!-- Typekit -->
-	<script>
-	  (function(d) {
-		var config = {
-		  kitId: 'rjz6mck',
-		  scriptTimeout: 3000,
-		  async: true
-		},
-		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-	  })(document);
-	</script>
+	<script src="https://use.typekit.net/rjz6mck.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
     
     <!-- Site javascript library -->
     <script src="js/functions.js"></script>
@@ -39,7 +31,7 @@
 <body>
 	<header>
         <div class="container-fluid login-header">
-            <div id="login-link">Log In</div>
+            <div id="login-link" data-toggle="modal" data-target="#loginModal">Log In</div>
             <span>|</span>
             <div>
             	<a href="signup.html">Sign Up</a>
@@ -54,7 +46,7 @@
         <div class="container-fluid hero-text">
             <div class="hero-header">Discounts. Experiences. Prizes</div>
             <div class="hero-subheader">Craving extraordinary new savings opportunities and unique experiences? It's time to shake up your day</div>     
-            <a href="#signup" class="btn btn-lg btn-success hero-button">Join Now! &raquo;</a>       
+            <a href="#signup" class="btn btn-lg btn-success hero-button">Join Now!<span class=" glyphicon glyphicon-menu-right"></span></a>       
         </div>
     </div> 
 	<div class="experience experience-discounts">   
@@ -69,19 +61,19 @@
             <!-- This is populated html that site side jquery turns into a slider -->
             <!-- This could easily be replaced with a database driven system -->
                 <div class="slidein-box">
-                    <img>
+                    <img src="images/logo_tirebuyer.png" class="img-responsive">
                     <div>Save 10% Instantly on Tires</div>
                 </div>
                 <div class="slidein-box">
-                    <img>
+                    <img src="images/logo_buschgardens.png" class="img-responsive">
                     <div>Save on Busch Gardens&reg; E-Tickets!</div>
                 </div>
                 <div class="slidein-box">
-                    <img>
+                    <img src="images/logo_petco.png" class="img-responsive">
                     <div>$7 off orders $70+</div>
                 </div>
                 <div class="slidein-box">
-                    <img>
+                    <img src="images/logo_amc.png" class="img-responsive">
                     <div>Save up to 8% on gift cards</div>
                 </div>
             </div>    
@@ -99,19 +91,19 @@
             <!-- This is populated html that jquery turns into a slider -->
             <!-- This could easily be replaced with a database driven system -->
                 <div class="slidein-box">
-                    <img>
+                    <img src="images/logo_lowes.png" class="img-responsive">
                     <div>3% cash back</div>
                 </div>
                 <div class="slidein-box">
-                    <img>
+                    <img src="images/logo_cvs.png" class="img-responsive">
                     <div>4% cash back</div>
                 </div>
                 <div class="slidein-box">
-                    <img>
+                    <img src="images/logo_wholefoods.png" class="img-responsive">
                     <div>3% cash back</div>
                 </div>
                 <div class="slidein-box">
-                    <img>
+                    <img src="images/logo_gap.png" class="img-responsive">
                     <div>3% cash back</div>
                 </div>
             </div>    
@@ -128,36 +120,62 @@
                 <div class="slidein-wrapper">
                 <!-- This is populated html that jquery turns into a navigation box that rotates automatically -->
                 <!-- This could easily be replaced with a database driven system -->
+                
                 <div class="auctions-container">
-                    <div class="auctions-header">Auctions</div>   
-                    <div class="auctions-contents">
-                        <div class="auction-controls">
-                            <div class="auction-control-left"></div>
-                            <div class="auction-control-right"></div>
-                        </div>
-                        <div class="auction-item">
-                            <div class="auction-time-left">12 hr : 25 min : 59 sec</div>
-                            <img>
-                            <div>Sharp 60" LED Smart HDTV</div>
-                        </div>
-                        <div class="auction-item">
-                            <div class="auction-time-left">7 hr : 12 min : 45 sec</div>
-                            <img>
-                            <div>Deluxe Extra Rounded Edges Ipad</div>                
-                        </div>
-                        <div class="auction-item">
-                            <div class="auction-time-left">1 hr : 1 min : 15 sec</div>
-                            <img>
-                            <div>Amazing Automatically Rotating Merchandise</div>                
-                        </div>            
+                    <div class="auctions-header">Auctions</div> 
+                    <div id="carousel-auction" class="carousel slide" data-ride="carousel">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                        <li data-target="#carousel-auction" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-auction" data-slide-to="1"></li>
+                        <li data-target="#carousel-auction" data-slide-to="2"></li>
+                      </ol>
+                    
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner" role="listbox">
+                          <div class="item active">
+                              <div class="auction-item">
+                                  <div class="auction-time-left">12 hr : 25 min : 59 sec</div>
+                    				<img src="images/merchandise_tv.jpg" class="img-responsive">
+                                  <div>Sharp 60" LED Smart HDTV</div>
+                              </div>
+                          </div>
+                          <div class="item">
+                              <div class="auction-item">
+                                  <div class="auction-time-left">7 hr : 12 min : 45 sec</div>
+                    				<img src="images/merchandise_ipad.png" class="img-responsive">
+                                  <div>Deluxe Extra Rounded Edges Ipad</div>                
+                              </div>
+                          </div>
+                          <div class="item">
+                              <div class="auction-item">
+                                  <div class="auction-time-left">1 hr : 1 min : 15 sec</div>
+                    				<img src="images/merchandise_merchandise.jpg" class="img-responsive">
+                                  <div>Amazing Automatically Rotating Merchandise</div>                
+                              </div>  
+                          </div>
+                      </div>
+                    
+                      <!-- Controls -->
+                      <a class="left carousel-control" href="#carousel-auction" role="button" data-slide="prev">
+                          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#carousel-auction" role="button" data-slide="next">
+                          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                      </a>
+                        
                     </div> 
                 </div> 
+                
+                
                 <div class="sweepstakes-container">
                     <div class="sweepstakes-header">Sweepstakes</div>
                     <div class="sweepstakes">
                         <div class="sweepstakes-item">
                             <div class="sweepstakes-time-left">1 hr : 1 min : 15 sec</div>
-                            <img>
+                            <img src="images/sweepstakes.jpg">
                             <div>Win a $5,000 Shopping Spree</div>                      
                         </div>    
                     </div>
@@ -187,5 +205,24 @@
             </div>
         </div>
     </footer>
+	
+    <!-- Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="loginModalLabel">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Login</button>
+          </div>
+        </div>
+      </div>
+    </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 /* CSS Document */
 
 body {
@@ -28,7 +29,7 @@ header {
 	font-size: 			1.35em;	
 	text-align: 		right;
     text-transform: 	uppercase;
-	z-index: 1000;
+	z-index: 			1000;
 }
 
 .login-header div {	
@@ -53,7 +54,9 @@ Hero Styling
 .hero {
 	display: 			block;
 	width: 				100%;
-	background: 		#666;
+	background: 		url(../images/hero_bg.jpg) #333;
+	background-repeat: 	no-repeat;
+	background-position: center;
 	color: 				#fff;
 	height: 			550px;
 }
@@ -107,11 +110,13 @@ Hero Styling
 .hero-button, .hero-button:link, .hero-button:visited {
     text-transform: 	uppercase;
 	font-size: 			2em;
-	font-weight: 		600;
+	font-weight: 		500;
+	line-height: 		1;
 	border-radius: 		0;
 	background-color: 	#ff6352;
 	border:				1px solid #ff4e3b;
 	margin: 			0 auto;
+	padding: 			16px 16px;
 }
 
 .hero-button:hover {
@@ -122,6 +127,10 @@ Hero Styling
 .hero-button:active, .hero-button:active:focus {
 	background-color: 	#ff4e3b;
 	border: 			1px solid #ff4e3b;
+}
+
+.hero-button .glyphicon {
+	font-size: .8em;
 }
 
 
@@ -225,11 +234,24 @@ Sliders
 	position: 			relative;
 }
 
+.slidein-box img {
+	vertical-align: 	middle;
+	text-align: 		center;
+	display: 			block;
+	position: 			relative;
+	top: 				50%;
+	left: 				50%;
+    -webkit-transform: 	translate(-50%,-60%);
+    -ms-transform: 		translate(-50%,-60%);
+    transform: 			translate(-50%,-60%);
+	padding: 			15px;
+}
+
 .slidein-box div {
 	position: 			absolute;
 	bottom: 			0;
 	width: 				100%;
-	font-size: 			1.1em;
+	font-size: 			.9em;
 	padding: 			10px 0;
 	background-color: 	#333;
 	color: 				#fff;
@@ -245,7 +267,7 @@ Auctions and Sweepstakes
 	display: 			inline-block;
 	width: 				472px;
 	max-width: 			472px;
-	height: 			300px;
+	height: 			340px;
 	margin: 			0 5px 0 5px;
 	border: 			2px solid #ddd;
 }
@@ -264,14 +286,62 @@ Auctions and Sweepstakes
 	font-size: 			1.3em;
 }
 
-.sweepstakes-item div {
-	vertical-align: baseline; 
+.sweepstakes-item div, .auction-item div {
+	position: 			absolute;
+	bottom: 			0;
  }
 
 .auction-time-left, .sweepstakes-time-left {
-	background-color: #41b89f !important;
+	background-color: 	#41b89f !important;
+	position: 			relative !important;
 	margin: 			1px 0 0 0;
+	vertical-align: 	top;
 }
+
+.auction-item, .sweepstakes-item {
+	position: 			relative;
+	height: 			300px;
+	display: 			block;
+} 
+
+.auction-item img {
+	max-height: 		180px;
+	vertical-align: 	middle;
+	text-align: 		center;
+	display: 			block;
+	position: 			relative;
+	top: 				5px;
+	left: 				50%;
+    -webkit-transform: 	translateX(-50%);
+    -ms-transform: 		translateX(-50%);
+    transform: 			translateX(-50%);
+}
+
+/*
+Carousel Overrides for Auctions
+*/
+
+.carousel-indicators li {
+	border-color: 		#666;	
+}
+
+.carousel-indicators .active {
+    background-color: 	#41b89f;
+	border-color: 		#41b89f;	
+}
+
+.carousel-indicators {
+	bottom: 			40px;
+}
+
+.carousel-control.right, .carousel-control.left {
+	background: 		none;	
+}
+
+.carousel-control .glyphicon {
+	color:  			#41b89f;
+}
+
 
 /* 
 Footer 
@@ -300,3 +370,7 @@ footer {
 .footer-links a {
 	color: 				#fff;	
 }
+
+/*
+Login Form
+*/
